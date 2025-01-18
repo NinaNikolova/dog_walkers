@@ -12,10 +12,14 @@ export default function MessagesView({ language }) {
       <div className="messages-list">
         <div className="message-item">
           <div className="message-avatar">
-            {/* User avatar */}
+          <img src="https://static-00.iconduck.com/assets.00/avatar-default-icon-1975x2048-2mpk4u9k.png" alt="person" />
           </div>
           <div className="message-content">
             <h3 className="message-sender">
+       
+            
+         
+   
               {language === 'bg' ? 'Георги Димитров' : 'George Dimitrov'}
             </h3>
             <p className="message-text">
