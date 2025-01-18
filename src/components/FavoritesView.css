@@ -1,0 +1,102 @@
+/* FavoritesView.css */
+.favorites-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .favorites-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .favorites-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .favorite-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .favorite-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .walker-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .walker-info {
+    flex-grow: 1;
+  }
+  
+  .walker-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .walker-description {
+    color: #6c757d;
+    margin: 5px 0 0;
+  }
+  
+  .no-favorites {
+    text-align: center;
+    color: #6c757d;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .favorites-container {
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    .favorites-title {
+      font-size: 1.25rem;
+    }
+  
+    .favorite-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .walker-avatar {
+      width: 40px;
+      height: 40px;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .walker-name {
+      font-size: 1.125rem;
+    }
+  
+    .walker-description {
+      font-size: 0.875rem;
+    }
+  }
+  
