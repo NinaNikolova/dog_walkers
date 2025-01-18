@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { PhoneCall, MessageCircleIcon } from 'lucide-react';
 import './WalkersView.css';
 
 export default function WalkersView({ language }) {
@@ -179,6 +180,11 @@ export default function WalkersView({ language }) {
                 </span>
               ))}
             </div>
+            <button className="reserve-button">
+              {language === 'bg' ? 'Резервирай' : 'Reserve'}
+            </button>
+            <PhoneCall size={20} className="icon" title={language === 'bg' ? 'Телефон' : 'Phone'} />
+            <MessageCircleIcon size={20} className="icon" title="Viber" />
           </div>
         </div>
       ))}

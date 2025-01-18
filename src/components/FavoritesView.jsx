@@ -1,4 +1,5 @@
 import React from 'react';
+import { PhoneCall, MessageCircleIcon } from 'lucide-react';
 import './FavoritesView.css';
 
 export default function FavoritesView({ language }) {
@@ -19,8 +20,8 @@ export default function FavoritesView({ language }) {
     },
   ];
 
-  const handleClick = (walker) => {
-    alert(`${language === 'bg' ? 'Разхождач:' : 'Walker:'} ${walker.name}`);
+  const handleReserve = (walker) => {
+    alert(`${language === 'bg' ? 'Резервиран разхождач:' : 'Reserved walker:'} ${walker.name}`);
   };
 
   return (
@@ -29,13 +30,9 @@ export default function FavoritesView({ language }) {
         {language === 'bg' ? 'Любими разхождачи' : 'Favorite Walkers'}
       </h2>
       <ul className="favorites-list">
-        {walkers.length > 0 ? (
+        {walkers?.length > 0 ? (
           walkers.map((walker, index) => (
-            <li
-              key={index}
-              className="favorite-item"
-              onClick={() => handleClick(walker)}
-            >
+            <li key={index} className="favorite-item">
               <div className="walker-avatar">
                 <img src={walker.image} alt={walker.name} />
               </div>
@@ -50,6 +47,19 @@ export default function FavoritesView({ language }) {
                       {specialty}
                     </span>
                   ))}
+                </div>
+                <div className="actions">
+                  <button
+                    className="reserve-button"
+                    onClick={() => handleReserve(walker)}
+                  >
+                    {language === 'bg' ? 'Резервирай' : 'Reserve'}
+                  </button>
+                  <div className="contact-icons">
+                    <PhoneCall size={20} className="icon" title={language === 'bg' ? 'Телефон' : 'Phone'} />
+                    <MessageCircleIcon size={20} className="icon" title="Viber" />
+          
+                  </div>
                 </div>
               </div>
             </li>
