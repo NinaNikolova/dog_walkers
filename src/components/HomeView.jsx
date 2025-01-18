@@ -66,6 +66,28 @@ export default function HomeView({ language }) {
             </div>
           </div>
         </div>
+        
+     
+      </div>
+
+      <div className="card">
+        <h2 className="card-title">
+          {language === 'bg' ? 'Виж предстоящи нечовешки събития' : 'See upcoming dog events'}
+        </h2>
+        <div className="card-content">
+          <div className="card-item">
+            <MapPin size={24} className="icon" />
+            <div>
+              <p className="item-title">
+                {language === 'bg' ? 'Виж картата' : 'Look on the map'}
+              </p>
+            </div>
+           <div>
+              <img src="https://thumbs.dreamstime.com/b/group-seven-puppies-featuring-playful-expressions-sit-together-driveway-enjoying-warm-sunshine-group-seven-340349326.jpg" alt="ring" />
+            </div>
+          </div>
+        </div>
+        
      
       </div>
     </div>
