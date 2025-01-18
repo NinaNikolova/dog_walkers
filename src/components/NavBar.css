@@ -1,15 +1,20 @@
 /* Navbar styles */
 .navbar {
-  background-color: #fff;
+  background-color: #3b7d4a;
+  color: white;
   border-bottom: 1px solid #ddd;
   padding: 0.5rem 1rem;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  
 }
 
 .navbar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 
 .navbar-logo {
@@ -74,7 +79,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .menu-toggle {
     display: block;
   }

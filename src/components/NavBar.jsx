@@ -16,6 +16,11 @@ export default function NavBar({ currentView, setCurrentView, language, setLangu
     settings: { icon: <Settings size={18} />, label: language === 'bg' ? 'Настройки' : 'Settings' }
   };
 
+  const handleNavClick = (key) => {
+    setCurrentView(key); // Update the current view
+    setIsMenuOpen(false); // Close the menu
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-header">
@@ -34,7 +39,7 @@ export default function NavBar({ currentView, setCurrentView, language, setLangu
         {Object.entries(navItems).map(([key, item]) => (
           <button
             key={key}
-            onClick={() => setCurrentView(key)}
+            onClick={() => handleNavClick(key)} // Call the handler to close the menu
             className={`nav-button ${currentView === key ? 'active' : ''}`}
           >
             {item.icon}
@@ -43,7 +48,10 @@ export default function NavBar({ currentView, setCurrentView, language, setLangu
         ))}
         <select
           value={language}
-          onChange={(e) => setLanguage(e.target.value)}
+          onChange={(e) => {
+            setLanguage(e.target.value);
+            setIsMenuOpen(false); // Close the menu when the language changes
+          }}
           className="language-selector"
         >
           <option value="bg">БГ</option>
