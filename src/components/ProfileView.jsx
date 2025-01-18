@@ -6,7 +6,7 @@ export default function ProfileView({ language }) {
     <div className="profile-container">
       <div className="profile-header">
         <div className="profile-avatar">
-          {/* User avatar */}
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl6l56cC0s4sjp7p-17JHH7mLrdBCJXfslL_2px2wdau8sXlvKTAXZl5luP1meB1xbbGE&usqp=CAU" alt="ivan" />
         </div>
         <div className="profile-info">
           <h2 className="profile-name">
