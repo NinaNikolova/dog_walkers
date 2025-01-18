@@ -1,0 +1,55 @@
+.walkers-container {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .walker-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+  }
+  
+  .avatar {
+    width: 4rem;
+    height: 4rem;
+    background-color: #d1fae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .avatar-icon {
+    color: #10b981;
+  }
+  
+  .walker-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .walker-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .walker-specialties {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .specialty-badge {
+    background-color: #d1fae5;
+    color: #064e3b;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+  }
+  

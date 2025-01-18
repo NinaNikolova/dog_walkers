@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 import User from './User';
+import './WalkersView.css';
 
-export default function WalkersView({language}) {
+export default function WalkersView({ language }) {
   const walkers = [
     {
       name: language === 'bg' ? 'Мария Петрова' : 'Maria Petrova',
@@ -18,21 +19,21 @@ export default function WalkersView({language}) {
   ];
 
   return (
-    <div className="grid gap-6">
+    <div className="walkers-container">
       {walkers.map((walker, index) => (
-        <div key={index} className="bg-white p-6 rounded-lg shadow flex items-start space-x-4">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
-            <User size={32} className="text-green-600" />
+        <div key={index} className="walker-card">
+          <div className="avatar">
+            <User size={32} className="avatar-icon" />
           </div>
           <div>
-            <h3 className="text-xl font-bold">{walker.name}</h3>
-            <div className="flex items-center space-x-2 mt-2">
+            <h3 className="walker-name">{walker.name}</h3>
+            <div className="walker-info">
               <span>⭐ {walker.rating}</span>
               <span>• {walker.walks}+ {language === 'bg' ? 'разходки' : 'walks'}</span>
             </div>
-            <div className="flex gap-2 mt-2">
+            <div className="walker-specialties">
               {walker.specialties.map((specialty, i) => (
-                <span key={i} className="bg-green-100 text-green-700 px-2 py-1 rounded text-sm">
+                <span key={i} className="specialty-badge">
                   {specialty}
                 </span>
               ))}
