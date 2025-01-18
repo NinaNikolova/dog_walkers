@@ -20,6 +20,9 @@ export default function HomeView({ language }) {
                 {language === 'bg' ? 'с Мария' : 'with Maria'}
               </p>
             </div>
+            <div>
+              <img src="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvam9iNjgzLTAxNjEucG5n.png" alt="walking" />
+            </div>
           </div>
         </div>
       </div>
@@ -39,6 +42,9 @@ export default function HomeView({ language }) {
                 {language === 'bg' ? 'от Георги' : 'from George'}
               </p>
             </div>
+            <div>
+              <img src="https://png.pngtree.com/png-vector/20230508/ourmid/pngtree-sms-icon-dialog-chat-new-message-gmail-email-vector-png-image_7090469.png" alt="message" />
+            </div>
           </div>
         </div>
       </div>
@@ -55,8 +61,12 @@ export default function HomeView({ language }) {
                 {language === 'bg' ? 'Виж картата' : 'Look on the map'}
               </p>
             </div>
+           <div>
+              <img src="https://s13emagst.akamaized.net/products/71497/71496723/images/res_a906fb81418f89ef43440cd1e216ddd5.jpg?width=720&height=720&hash=D03E0FFD0CCDAB70537FED911E0985C7" alt="ring" />
+            </div>
           </div>
         </div>
+     
       </div>
     </div>
   );
