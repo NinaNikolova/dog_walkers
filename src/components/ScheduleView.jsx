@@ -1,77 +1,54 @@
 import React, { useState } from 'react';
-import './ScheduleView.css';
+import './SettingsView.css';
 
-export default function ScheduleView({ language }) {
-  const [selectedDay, setSelectedDay] = useState(null);
-  const days = [
-    { name: language === 'bg' ? 'Понеделник' : 'Monday', short: 'Пн' },
-    { name: language === 'bg' ? 'Вторник' : 'Tuesday', short: 'Вт' },
-    { name: language === 'bg' ? 'Сряда' : 'Wednesday', short: 'Ср' },
-        { name: language === 'bg' ? 'Четвъртък' : 'Thursday', short: 'Чт' },
-  ];
-  const days2 = [
-    { name: language === 'bg' ? 'Петък' : 'Friday', short: 'Пт' },
-    { name: language === 'bg' ? 'Събота' : 'Saturday', short: 'Сб' },
-    { name: language === 'bg' ? 'Неделя' : 'Sunday', short: 'Нд' },
+export default function SettingsView({ language }) {
+  const [theme, setTheme] = useState('light'); // 'light' or 'dark'
 
-  ];
+  const handleThemeChange = (event) => {
+    setTheme(event.target.value);
 
-
-
-
-  const handleDayClick = (day) => {
-    setSelectedDay(day.name);
-    alert(`${language === 'bg' ? 'Избран ден:' : 'Selected Day:'} ${day.name}`);
   };
 
   return (
-    <div className="schedule-container">
-      <h2 className="schedule-title">
-        {language === 'bg' ? 'Седмичен график' : 'Weekly Schedule'}
+    <div className={`settings-container ${theme === 'dark' ? 'dark-mode' : ''}`}>
+      <h2 className="settings-title">
+        {language === 'bg' ? 'Настройки' : 'Settings'}
       </h2>
-      <div className="schedule-grid">
-        {days.map((day, index) => (
-          <div
-            key={index}
-            className={`schedule-day ${selectedDay === day.name ? 'selected' : ''}`}
-            onClick={() => handleDayClick(day)}
-          >
-            <div className="schedule-day-name">{day.short}</div>
-            <div className="schedule-time">
-              {language === 'bg' ? 'Свободно време' : 'Available Time'}
-            </div>
-            <ul className="time-slots">
-              {['09:00', '12:00', '15:00', '18:00'].map((time, i) => (
-                <li key={i} className="time-slot">
-                  {time}
-                </li>
-              ))}
-            </ul>
-          </div>            
-        ))}
-        
+
+      <div className="settings-section">
+        <h3 className="settings-section-title">
+          {language === 'bg' ? 'Тема' : 'Theme'}
+        </h3>
+        <div className="settings-option">
+          <label>
+            <input
+              type="radio"
+              name="theme"
+              value="light"
+              checked={theme === 'light'}
+              onChange={handleThemeChange}
+            />
+            {language === 'bg' ? 'Светла' : 'Light'}
+          </label>
+        </div>
+        <div className="settings-option">
+          <label>
+            <input
+              type="radio"
+              name="theme"
+              value="dark"
+              checked={theme === 'dark'}
+              onChange={handleThemeChange}
+            />
+            {language === 'bg' ? 'Тъмна' : 'Dark'}
+          </label>
+        </div>
       </div>
-      <div className="schedule-grid">
-        {days2.map((day, index) => (
-          <div
-            key={index}
-            className={`schedule-day ${selectedDay === day.name ? 'selected' : ''}`}
-            onClick={() => handleDayClick(day)}
-          >
-            <div className="schedule-day-name">{day.short}</div>
-            <div className="schedule-time">
-              {language === 'bg' ? 'Свободно време' : 'Available Time'}
-            </div>
-            <ul className="time-slots">
-              {['09:00', '12:00', '15:00', '18:00'].map((time, i) => (
-                <li key={i} className="time-slot">
-                  {time}
-                </li>
-              ))}
-            </ul>
-          </div>            
-        ))}
-        
+
+      <div className="settings-section">
+        <button className="settings-reset-button" onClick={() => setTheme('light')}>
+          {language === 'bg' ? 'Възстанови по подразбиране' : 'Reset to Default'}
+        </button>
       </div>
     </div>
   );

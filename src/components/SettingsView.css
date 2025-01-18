@@ -1,66 +1,58 @@
-.schedule-container {
-  text-align: center;
+/* General Styles */
+.settings-container {
+  max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+  
 }
 
-.schedule-title {
+.settings-container.dark-mode {
+  background: #121212;
+  color: #f9f9f9;
+}
+
+.settings-title {
+  text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-.schedule-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
+.settings-section {
+  margin-bottom: 20px;
 }
 
-.schedule-day {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.schedule-day:hover {
-  background-color: #f0f8ff;
-  transform: scale(1.05);
-}
-
-.schedule-day.selected {
-  background-color: #007bff;
-  color: white;
-  border-color: #0056b3;
-}
-
-.schedule-day-name {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.schedule-time {
-  font-size: 14px;
-  color: #666;
+.settings-section-title {
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
-.time-slots {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.settings-option {
+  margin-bottom: 10px;
 }
 
-.time-slot {
-  font-size: 12px;
-  margin: 5px 0;
-  background-color: #e9ecef;
-  padding: 5px;
-  border-radius: 4px;
-}
-
-.time-slot:hover {
-  background-color: #d4edda;
+.settings-option label {
+  font-size: 16px;
   cursor: pointer;
+}
+
+.settings-reset-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #ff6b6b;
+  color: #fff;
+  
+}
+
+.settings-reset-button:hover {
+  background: #e53935;
+}
+.dark-mode{
+  background: black;
 }
