@@ -1,55 +1,83 @@
 .walkers-container {
-    display: grid;
-    gap: 1.5rem;
-  }
-  
-  .walker-card {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: start;
-    gap: 1rem;
-  }
-  
-  .avatar {
-    width: 4rem;
-    height: 4rem;
-    background-color: #d1fae5;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .avatar-icon {
-    color: #10b981;
-  }
-  
-  .walker-name {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  
-  .walker-info {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
-  
-  .walker-specialties {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
-  
-  .specialty-badge {
-    background-color: #d1fae5;
-    color: #064e3b;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-bar {
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-bar input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.walker-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  width: 80%;
+  max-width: 600px;
+  transition: transform 0.3s;
+}
+
+.walker-card:hover {
+  transform: scale(1.05);
+}
+
+.avatar {
+  margin-right: 20px;
+}
+
+.avatar-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.walker-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.walker-info {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0;
+}
+
+.walker-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.specialty-badge {
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 14px;
+  color: #555;
+}
