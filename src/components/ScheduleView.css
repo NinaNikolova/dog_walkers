@@ -21,7 +21,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    /* gap: 0.6rem; */
     width: 100%;
     margin: 10px;
   }
@@ -49,7 +49,7 @@
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .schedule-day {
-      width: 90%;
+      width: 100%;
     }
       .schedule-grid {
     display: flex;
