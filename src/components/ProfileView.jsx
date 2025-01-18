@@ -59,11 +59,7 @@ export default function ProfileView({ language }) {
         </ul>
       </div>
 
-      <div className="profile-actions">
-        <button className="logout-button" onClick={handleLogout}>
-          {language === 'bg' ? 'Изход' : 'Log Out'}
-        </button>
-      </div>
+      
 
        {/* Chatbot Section */}
        <div className="chatbot-container">
@@ -91,6 +87,12 @@ export default function ProfileView({ language }) {
             {language === 'bg' ? 'Изпрати' : 'Send'}
           </button>
         </div>
+   
+      </div>
+           <div className="profile-actions">
+        <button className="logout-button" onClick={handleLogout}>
+          {language === 'bg' ? 'Изход' : 'Log Out'}
+        </button>
       </div>
     </div>
   );
