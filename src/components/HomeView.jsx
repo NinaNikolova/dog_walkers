@@ -1,6 +1,7 @@
 import React from 'react';
 import { Bell, Calendar, MapPin } from 'lucide-react';
 import './HomeView.css';
+import Feedback from './Feedback';
 
 export default function HomeView({ language }) {
   return (
@@ -90,6 +91,7 @@ export default function HomeView({ language }) {
         
      
       </div>
+      <Feedback />
     </div>
   );
 }
