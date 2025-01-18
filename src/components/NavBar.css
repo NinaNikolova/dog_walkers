@@ -31,7 +31,7 @@
 .navbar-title {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #333;
+  color: white;
 }
 
 .menu-toggle {
@@ -40,6 +40,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  color: white;
 }
 
 .navbar-menu {
@@ -67,9 +68,15 @@
   display: inline-block;
 }
 
-.nav-button.active {
-  background-color: #f0f0f0;
+.nav-button:hover{
+  background-color: darkgreen;
   border-radius: 0.25rem;
+  color: white;
+}
+.nav-button.active {
+  background-color: darkgreen;
+  border-radius: 0.25rem;
+  color: white;
 }
 
 .language-selector {
