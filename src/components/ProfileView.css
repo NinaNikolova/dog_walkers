@@ -72,3 +72,77 @@
 .logout-button:hover {
   background: #e53935;
 }
+
+/* Chatbot Styles */
+.chatbot-container {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f7f9fc;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.chatbot-messages {
+  max-height: 250px;
+  overflow-y: auto;
+  background: #ffffff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.chatbot-message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.user-message {
+  background: #d1f7d6;
+  text-align: right;
+  color: #333;
+}
+
+.bot-message {
+  background: #f4f4f4;
+  text-align: left;
+  color: #555;
+}
+
+.chatbot-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.chatbot-input button {
+  padding: 10px 20px;
+  border: none;
+  background: green;
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chatbot-input button:hover {
+  background-color: darkgreen;
+}

@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProfileView.css';
 
 export default function ProfileView({ language }) {
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState('');
+
+  const handleSendMessage = () => {
+    if (input.trim()) {
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { sender: 'user', text: input },
+        { sender: 'bot', text: language === 'bg' ? 'Как мога да помогна?' : 'How can I help you?' },
+      ]);
+      setInput('');
+    }
+  };
+
   const handleLogout = () => {
     alert(language === 'bg' ? 'Излязохте от профила!' : 'You have logged out!');
-    // Add actual log-out logic here (e.g., clearing tokens, redirecting)
   };
 
   return (
@@ -25,6 +38,7 @@ export default function ProfileView({ language }) {
           </p>
         </div>
       </div>
+
       <div className="profile-details">
         <h3 className="details-title">
           {language === 'bg' ? 'Детайли' : 'Details'}
@@ -44,10 +58,39 @@ export default function ProfileView({ language }) {
           </li>
         </ul>
       </div>
+
       <div className="profile-actions">
         <button className="logout-button" onClick={handleLogout}>
           {language === 'bg' ? 'Изход' : 'Log Out'}
         </button>
+      </div>
+
+       {/* Chatbot Section */}
+       <div className="chatbot-container">
+        <h3 className="chatbot-title">{language === 'bg' ? 'Чатбот' : 'Chatbot'}</h3>
+        <div className="chatbot-messages">
+          {messages.map((message, index) => (
+            <div
+              key={index}
+              className={`chatbot-message ${
+                message.sender === 'user' ? 'user-message' : 'bot-message'
+              }`}
+            >
+              {message.text}
+            </div>
+          ))}
+        </div>
+        <div className="chatbot-input">
+          <input
+            type="text"
+            placeholder={language === 'bg' ? 'Напишете съобщение...' : 'Type a message...'}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button onClick={handleSendMessage}>
+            {language === 'bg' ? 'Изпрати' : 'Send'}
+          </button>
+        </div>
       </div>
     </div>
   );
