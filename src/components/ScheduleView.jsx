@@ -18,6 +18,7 @@ export default function ScheduleView({ language }) {
 
 
 
+
   const handleDayClick = (day) => {
     setSelectedDay(day.name);
     alert(`${language === 'bg' ? 'Избран ден:' : 'Selected Day:'} ${day.name}`);

@@ -23,6 +23,7 @@
     justify-content: center;
     gap: 1rem;
     width: 100%;
+    margin: 10px;
   }
   
   .schedule-day {
@@ -48,7 +49,7 @@
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .schedule-day {
-      width: 40%;
+      width: 90%;
     }
       .schedule-grid {
     display: flex;
