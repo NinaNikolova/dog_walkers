@@ -32,8 +32,7 @@ export default function SettingsView({ language }) {
         </h3>
         <select
           className="settings-language-selector"
-          value={language}
-         
+          defaultValue={language}
         >
           <option value="bg">Български (BG)</option>
           <option value="en">English (EN)</option>
