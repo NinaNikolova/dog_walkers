@@ -56,3 +56,22 @@
 .dark-mode{
   background: black;
 }
+.settings-save-button{
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: green;
+  color: #fff;
+}
+.settings-save-button:hover{
+  background-color: darkgreen;
+}
+
+select{
+  padding: 5px;
+  border: 0.5px solid gray;
+  border-radius: 5px;
+}
+
