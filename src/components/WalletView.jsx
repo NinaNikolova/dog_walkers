@@ -1,12 +1,24 @@
-import React from 'react'
+import React from 'react';
+import './WalletView.css';
 
-export default function WalletView({language}) {
+export default function WalletView({ language }) {
   return (
-    <div className="bg-white p-6 rounded-lg shadow">
-      <h2 className="text-xl font-bold mb-4">
+    <div className="wallet-container">
+      <h2 className="wallet-title">
         {language === 'bg' ? 'Портфейл' : 'Wallet'}
       </h2>
-      <div className="text-3xl font-bold text-green-600">50.00 BGN</div>
+      <div className="wallet-balance">50.00 BGN</div>
+      <div className="payment-options">
+        <button className="payment-button card-button">
+          {language === 'bg' ? 'Плати с карта' : 'Pay with Card'}
+        </button>
+        <button className="payment-button bank-button">
+          {language === 'bg' ? 'Плати с банка' : 'Pay with Bank'}
+        </button>
+        <button className="payment-button revolut-button">
+          {language === 'bg' ? 'Плати с Revolut' : 'Pay with Revolut'}
+        </button>
+      </div>
     </div>
   );
 }
