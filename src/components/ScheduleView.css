@@ -8,6 +8,7 @@
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
   }
   
   .schedule-title {
@@ -31,7 +32,6 @@
     padding: 1rem;
     border: 1px solid #e5e7eb;
     border-radius: 0.375rem;
-    width: calc(100% / 7 - 1rem);
     box-sizing: border-box;
   }
   
@@ -48,13 +48,16 @@
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .schedule-day {
-      width: calc(100% / 3 - 1rem);
+      width: 40%;
     }
+      .schedule-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ 
   }
+  }
+
   
-  @media (max-width: 480px) {
-    .schedule-day {
-      width: 100%;
-    }
-  }
+
   
