@@ -45,7 +45,7 @@
 }
 
 .avatar {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .avatar-icon {
@@ -117,20 +117,7 @@
   background-color: #0056b3;
 }
 
-.contact-icons {
-  display: flex;
-  gap: 10px;
-}
 
-.icon {
-  cursor: pointer;
-  color: #555;
-  transition: color 0.3s;
-}
-
-.icon:hover {
-  color: #007bff;
-}
 .actions {
   display: flex;
   align-items: center;
@@ -160,10 +147,10 @@
 
 .icon {
   cursor: pointer;
-  color: #555;
+  color: green;
   transition: color 0.3s;
 }
 
 .icon:hover {
-  color: #007bff;
+  color: darkgreen;
 }
