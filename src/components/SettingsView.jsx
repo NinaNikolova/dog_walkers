@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SettingsView.css';
 
 export default function SettingsView({ language }) {
+  const [fontSize, setFontSize] = useState('medium');
+
+  const handleFontSizeChange = (event) => {
+    setFontSize(event.target.value);
+  };
+
   return (
     <div className="settings-container">
       <h2 className="settings-title">
@@ -37,6 +43,33 @@ export default function SettingsView({ language }) {
           <option value="bg">Български (BG)</option>
           <option value="en">English (EN)</option>
         </select>
+      </div>
+
+      <div className="settings-section">
+        <h3 className="settings-section-title">
+          {language === 'bg' ? 'Размер на шрифта' : 'Font Size'}
+        </h3>
+        <select
+          className="settings-language-selector"
+          value={fontSize}
+          onChange={handleFontSizeChange}
+        >
+          <option value="small">{language === 'bg' ? 'Малък' : 'Small'}</option>
+          <option value="medium">{language === 'bg' ? 'Среден' : 'Medium'}</option>
+          <option value="large">{language === 'bg' ? 'Голям' : 'Large'}</option>
+        </select>
+      </div>
+
+      <div className="settings-section">
+        <button className="settings-reset-button">
+          {language === 'bg' ? 'Възстанови по подразбиране' : 'Reset to Default'}
+        </button>
+      </div>
+
+      <div className="settings-section">
+        <button className="settings-save-button">
+          {language === 'bg' ? 'Запази' : 'Save'}
+        </button>
       </div>
     </div>
   );
