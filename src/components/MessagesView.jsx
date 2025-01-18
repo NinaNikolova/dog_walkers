@@ -12,7 +12,7 @@ export default function MessagesView({ language }) {
       <div className="messages-list">
         <div className="message-item">
           <div className="message-avatar">
-          <img src="https://static-00.iconduck.com/assets.00/avatar-default-icon-1975x2048-2mpk4u9k.png" alt="person" />
+          <img src="https://t3.ftcdn.net/jpg/06/99/46/60/360_F_699466075_DaPTBNlNQTOwwjkOiFEoOvzDV0ByXR9E.jpg" alt="person" />
           </div>
           <div className="message-content">
             <h3 className="message-sender">

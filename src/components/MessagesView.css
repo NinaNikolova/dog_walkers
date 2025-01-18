@@ -65,6 +65,9 @@
     color: #6c757d;
     margin: 4px 0 0;
   }
+  img{
+    border-radius: 50px;
+  }
   
   /* Responsive Design */
   @media (max-width: 768px) {
