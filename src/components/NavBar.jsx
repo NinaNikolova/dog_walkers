@@ -1,8 +1,10 @@
-import React from 'react';
-import {  Calendar, Heart, Home, MapPin, MessageCircle, Settings, User, Wallet } from 'lucide-react';
+import React, { useState } from 'react';
+import { Calendar, Heart, Home, MapPin, MessageCircle, Settings, User, Wallet } from 'lucide-react';
 import './NavBar.css';
 
 export default function NavBar({ currentView, setCurrentView, language, setLanguage }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const navItems = {
     home: { icon: <Home size={18} />, label: language === 'bg' ? 'Начало' : 'Home' },
     walkers: { icon: <MapPin size={18} />, label: language === 'bg' ? 'Разхождачи' : 'Walkers' },
@@ -16,11 +18,19 @@ export default function NavBar({ currentView, setCurrentView, language, setLangu
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        <img src="/logo512.png" alt="Morty logo" className="navbar-logo-img" />
-        <span className="navbar-title">Run With Morty</span>
+      <div className="navbar-header">
+        <div className="navbar-logo">
+          <img src="/logo512.png" alt="Morty logo" className="navbar-logo-img" />
+          <span className="navbar-title">Run With Morty</span>
+        </div>
+        <button
+          className="menu-toggle"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          ☰
+        </button>
       </div>
-      <div className="navbar-menu">
+      <div className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
         {Object.entries(navItems).map(([key, item]) => (
           <button
             key={key}
