@@ -1,28 +1,26 @@
-import React from 'react'
-import User from './User';
+import React from 'react';
+import './MessagesView.css';
 
-export default function MessagesView({language}) {
+export default function MessagesView({ language }) {
   return (
-    <div className="bg-white rounded-lg shadow">
-      <div className="border-b p-4">
-        <h2 className="text-xl font-bold">
+    <div className="messages-container">
+      <div className="messages-header">
+        <h2 className="messages-title">
           {language === 'bg' ? 'Съобщения' : 'Messages'}
         </h2>
       </div>
-      <div className="divide-y">
-        <div className="p-4 hover:bg-gray-50">
-          <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-  
-            </div>
-            <div className="flex-1">
-              <h3 className="font-bold">
-                {language === 'bg' ? 'Георги Димитров' : 'George Dimitrov'}
-              </h3>
-              <p className="text-gray-600">
-                {language === 'bg' ? 'Здравейте! Кога да взема Макс?' : 'Hi! When should I pick up Max?'}
-              </p>
-            </div>
+      <div className="messages-list">
+        <div className="message-item">
+          <div className="message-avatar">
+            {/* User avatar */}
+          </div>
+          <div className="message-content">
+            <h3 className="message-sender">
+              {language === 'bg' ? 'Георги Димитров' : 'George Dimitrov'}
+            </h3>
+            <p className="message-text">
+              {language === 'bg' ? 'Здравейте! Кога да взема Макс?' : 'Hi! When should I pick up Max?'}
+            </p>
           </div>
         </div>
       </div>

@@ -1,23 +1,37 @@
-import React from 'react'
-import User from './User';
+import React from 'react';
+import './ProfileView.css';
 
-export default function ProfileView({language}) {
+export default function ProfileView({ language }) {
   return (
-    <div className="max-w-2xl mx-auto bg-white rounded-lg shadow">
-      <div className="p-6">
-        <div className="flex items-center space-x-4">
-          <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
-        
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold">
-              {language === 'bg' ? 'Иван Иванов' : 'Ivan Ivanov'}
-            </h2>
-            <p className="text-gray-600">
-              {language === 'bg' ? 'София, България' : 'Sofia, Bulgaria'}
-            </p>
-          </div>
+    <div className="profile-container">
+      <div className="profile-header">
+        <div className="profile-avatar">
+          {/* User avatar */}
         </div>
+        <div className="profile-info">
+          <h2 className="profile-name">
+            {language === 'bg' ? 'Иван Иванов' : 'Ivan Ivanov'}
+          </h2>
+          <p className="profile-location">
+            {language === 'bg' ? 'София, България' : 'Sofia, Bulgaria'}
+          </p>
+        </div>
+      </div>
+      <div className="profile-details">
+        <h3 className="details-title">
+          {language === 'bg' ? 'Детайли' : 'Details'}
+        </h3>
+        <ul className="details-list">
+          <li className="details-item">
+            <strong>{language === 'bg' ? 'Професия' : 'Profession'}:</strong> {language === 'bg' ? 'Програмист' : 'Developer'}
+          </li>
+          <li className="details-item">
+            <strong>{language === 'bg' ? 'Адрес' : 'Address'}:</strong> {language === 'bg' ? 'София' : 'sofia'}
+          </li>
+          <li className="details-item">
+            <strong>{language === 'bg' ? 'Куче' : 'Dog'}:</strong> {language === 'bg' ? 'Рекс' : 'Rex'}
+          </li>
+        </ul>
       </div>
     </div>
   );
