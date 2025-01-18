@@ -7,7 +7,7 @@ export default function ProfileView({language}) {
       <div className="p-6">
         <div className="flex items-center space-x-4">
           <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
-            <User size={40} className="text-green-600" />
+        
           </div>
           <div>
             <h2 className="text-2xl font-bold">

@@ -13,7 +13,7 @@ export default function MessagesView({language}) {
         <div className="p-4 hover:bg-gray-50">
           <div className="flex items-center space-x-4">
             <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-              <User size={24} className="text-green-600" />
+  
             </div>
             <div className="flex-1">
               <h3 className="font-bold">
