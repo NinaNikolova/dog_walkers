@@ -16,14 +16,14 @@
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid green;
   border-radius: 5px;
   outline: none;
   box-sizing: border-box;
 }
 
 .search-bar input:focus {
-  border-color: #007BFF;
+  border-color: green;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
@@ -35,7 +35,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 15px;
-  width: 80%;
+  width: 96%;
   max-width: 600px;
   transition: transform 0.3s;
 }
@@ -45,7 +45,7 @@
 }
 
 .avatar {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .avatar-icon {
@@ -101,48 +101,9 @@
   margin-top: 10px;
 }
 
-.reserve-button {
-  margin-right: 10px;
-  padding: 8px 12px;
-  font-size: 14px;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.reserve-button:hover {
-  background-color: #0056b3;
-}
-
-
-.actions {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.reserve-button {
-  margin-right: 10px;
-  padding: 8px 12px;
-  font-size: 14px;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.reserve-button:hover {
-  background-color: #0056b3;
-}
-
 .contact-icons {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 .icon {
