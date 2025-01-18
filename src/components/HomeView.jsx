@@ -45,7 +45,7 @@ export default function HomeView({ language }) {
 
       <div className="card">
         <h2 className="card-title">
-          {language === 'bg' ? 'Къде е в момента моето куче' : 'Where is my dog now'}
+          {language === 'bg' ? 'Къде е в момента моето куче?' : 'Where is my dog now?'}
         </h2>
         <div className="card-content">
           <div className="card-item">
