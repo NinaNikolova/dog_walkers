@@ -8,6 +8,7 @@ export default function ScheduleView({ language }) {
     { name: language === 'bg' ? 'Вторник' : 'Tuesday', short: 'Вт' },
     { name: language === 'bg' ? 'Сряда' : 'Wednesday', short: 'Ср' },
         { name: language === 'bg' ? 'Четвъртък' : 'Thursday', short: 'Чт' },
+
   ];
   const days2 = [
     { name: language === 'bg' ? 'Петък' : 'Friday', short: 'Пт' },
@@ -64,28 +65,7 @@ export default function ScheduleView({ language }) {
           </div>            
         ))}
       </div>
-      <div className="schedule-grid">
-        {days2.map((day, index) => (
-          <div
-            key={index}
-            className={`schedule-day ${selectedDay === day.name ? 'selected' : ''}`}
-            onClick={() => handleDayClick(day)}
-          >
-            <div className="schedule-day-name">{day.short}</div>
-            <div className="schedule-time">
-              {language === 'bg' ? 'Свободно време' : 'Available Time'}
-            </div>
-            <ul className="time-slots">
-              {['09:00', '12:00', '15:00', '18:00'].map((time, i) => (
-                <li key={i} className="time-slot">
-                  {time}
-                </li>
-              ))}
-            </ul>
-          </div>            
-        ))}
-        
-      </div>
+     
     </div>
   );
 }
