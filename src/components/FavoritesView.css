@@ -1,103 +1,78 @@
-/* FavoritesView.css */
 .favorites-container {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-  }
-  
-  .favorites-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .favorites-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .favorite-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-  }
-  
-  .favorite-item:hover {
-    background-color: #f9f9f9;
-  }
-  
-  .walker-avatar {
-    width: 50px;
-    height: 50px;
-    background-color: #e0e0e0;
-    border-radius: 50%;
-    margin-right: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .walker-info {
-    flex-grow: 1;
-  }
-  
-  .walker-name {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .walker-description {
-    color: #6c757d;
-    margin: 5px 0 0;
-  }
-  
-  .no-favorites {
-    text-align: center;
-    color: #6c757d;
-    font-size: 1rem;
-    margin-top: 20px;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .favorites-container {
-      margin: 10px;
-      padding: 15px;
-      width: 90%;
-    }
-  
-    .favorites-title {
-      font-size: 1.25rem;
-    }
-  
-    .favorite-item {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .walker-avatar {
-      width: 40px;
-      height: 40px;
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-  
-    .walker-name {
-      font-size: 1.125rem;
-    }
-  
-    .walker-description {
-      font-size: 0.875rem;
-    }
-  }
-  
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.favorites-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.favorites-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.favorite-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.favorite-item:hover {
+  background-color: #f0f8ff;
+  transform: scale(1.05);
+}
+
+.walker-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.walker-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.walker-rating {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.walker-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.specialty-badge {
+  background-color: #e9ecef;
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: #555;
+}
+
+.no-favorites {
+  font-size: 16px;
+  color: #777;
+}
