@@ -1,16 +1,17 @@
-import React from 'react'
+import React from 'react';
+import './ScheduleView.css';
 
-export default function ScheduleView({language}) {
+export default function ScheduleView({ language }) {
   return (
-    <div className="bg-white p-6 rounded-lg shadow">
-      <h2 className="text-xl font-bold mb-4">
+    <div className="schedule-container">
+      <h2 className="schedule-title">
         {language === 'bg' ? 'Седмичен график' : 'Weekly Schedule'}
       </h2>
-      <div className="grid grid-cols-7 gap-4">
+      <div className="schedule-grid">
         {['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Нд'].map((day, index) => (
-          <div key={index} className="text-center p-4 border rounded">
-            <div className="font-bold mb-2">{day}</div>
-            <div className="text-sm text-gray-600">15:00</div>
+          <div key={index} className="schedule-day">
+            <div className="schedule-day-name">{day}</div>
+            <div className="schedule-time">15:00</div>
           </div>
         ))}
       </div>
