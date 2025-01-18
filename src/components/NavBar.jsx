@@ -10,10 +10,11 @@ export default function NavBar({ currentView, setCurrentView, language, setLangu
     walkers: { icon: <MapPin size={18} />, label: language === 'bg' ? 'Разхождачи' : 'Walkers' },
     schedule: { icon: <Calendar size={18} />, label: language === 'bg' ? 'График' : 'Schedule' },
     messages: { icon: <MessageCircle size={18} />, label: language === 'bg' ? 'Съобщения' : 'Messages' },
-    profile: { icon: <User size={18} />, label: language === 'bg' ? 'Профил' : 'Profile' },
+   
     favorites: { icon: <Heart size={18} />, label: language === 'bg' ? 'Любими' : 'Favorites' },
     wallet: { icon: <Wallet size={18} />, label: language === 'bg' ? 'Портфейл' : 'Wallet' },
-    settings: { icon: <Settings size={18} />, label: language === 'bg' ? 'Настройки' : 'Settings' }
+    settings: { icon: <Settings size={18} />, label: language === 'bg' ? 'Настройки' : 'Settings' },
+    profile: { icon: <User size={18} />, label: language === 'bg' ? 'Здравей, Иван' : 'Hi, Ivan' },
   };
 
   const handleNavClick = (key) => {

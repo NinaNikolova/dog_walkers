@@ -2,6 +2,10 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    width: 90%;
+  }
+  .card{
+    width: 90%;
   }
   
   @media (min-width: 768px) {
