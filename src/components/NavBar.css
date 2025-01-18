@@ -7,7 +7,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  
+
 }
 
 .navbar-header {
@@ -15,12 +15,13 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+
 }
 
 .navbar-logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .navbar-logo-img {
@@ -32,14 +33,19 @@
   font-size: 1.25rem;
   font-weight: bold;
   color: white;
+
 }
 
 .menu-toggle {
+  position: fixed; /* Fixes the button to the screen */
+  top: 5px;
+  right: 20px; /* Adjusts the distance from the right edge */
   display: none;
-  font-size: 1.5rem;
   background: none;
   border: none;
+  font-size: 30px;
   cursor: pointer;
+
   color: white;
 }
 
@@ -86,7 +92,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .menu-toggle {
     display: block;
   }
@@ -119,4 +125,5 @@
     margin-left: auto;
     margin-right: auto;
   }
+
 }
