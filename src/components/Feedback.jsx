@@ -15,7 +15,7 @@ const Feedback = ({ language, onClose }) => {
       <div className="feedback-header">
         <h3 className="feedback-title">{language === 'bg' ? 'Обратна връзка' : 'Feedback'}</h3>
         <button onClick={onClose} className="feedback-close-button">
-          {language === 'bg' ? 'Затвори' : 'Close'}
+          {language === 'bg' ? 'x' : 'x'}
         </button>
       </div>
       {submitted ? (

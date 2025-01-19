@@ -1,14 +1,14 @@
 /* Feedback.css */
 .feedback-container {
     position: fixed;
-    bottom: 20px;      /* Distance from the bottom of the screen */
-    right: 20px;       /* Distance from the right edge of the screen */
+    bottom: 40px;      /* Distance from the bottom of the screen */
+    right: 16px;       /* Distance from the right edge of the screen */
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 200px;
-    height: 130px;
+    height: 120px;
     font-family: Arial, sans-serif;
     z-index: 999;      /* Ensures it's always on top */
   }
@@ -18,12 +18,12 @@
     font-weight: bold;
     color: #333;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
   
   .feedback-textarea {
     width: 100%;
-    height: 50px;
+    height: 40px;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ddd;
@@ -49,7 +49,7 @@
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.8rem;
     transition: background-color 0.3s ease;
   }
   
@@ -66,9 +66,11 @@
     background: none;
     border: none;
     color: #ff0000;
-    font-size: 16px;
+    font-size: 1.3rem;
     cursor: pointer;
     margin-left: auto;
+    font-weight: bold;
+
   }
   .feedback-header {
     display: flex;
