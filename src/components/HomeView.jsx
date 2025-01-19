@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Bell, Calendar, MapPin } from 'lucide-react';
 import './HomeView.css';
 import Feedback from './Feedback';
 
 export default function HomeView({ language }) {
+  const [isFeedbackVisible, setIsFeedbackVisible] = useState(true);
   return (
     <div className="home-container">
       <div className="card">
@@ -62,13 +63,11 @@ export default function HomeView({ language }) {
                 {language === 'bg' ? 'Виж картата' : 'Look on the map'}
               </p>
             </div>
-           <div>
+            <div>
               <img src="https://s13emagst.akamaized.net/products/71497/71496723/images/res_a906fb81418f89ef43440cd1e216ddd5.jpg?width=720&height=720&hash=D03E0FFD0CCDAB70537FED911E0985C7" alt="ring" />
             </div>
           </div>
         </div>
-        
-     
       </div>
 
       <div className="card">
@@ -83,15 +82,52 @@ export default function HomeView({ language }) {
                 {language === 'bg' ? 'Виж картата' : 'Look on the map'}
               </p>
             </div>
-           <div>
+            <div>
               <img src="https://thumbs.dreamstime.com/b/group-seven-puppies-featuring-playful-expressions-sit-together-driveway-enjoying-warm-sunshine-group-seven-340349326.jpg" alt="ring" />
             </div>
           </div>
         </div>
-        
-     
       </div>
-      <Feedback />
+
+      <div className="card">
+        <h2 className="card-title">
+          {language === 'bg' ? 'Виж камери у дома' : 'See camera at home'}
+        </h2>
+        <div className="card-content">
+          <div className="card-item" onClick={() => window.open('https://www.shutterstock.com/image-photo/playback-cctv-cameras-office-on-600nw-2266583461.jpg', '_blank')} style={{ cursor: 'pointer' }}>
+            <MapPin size={24} className="icon" />
+            <div>
+              <p className="item-title">
+                {language === 'bg' ? 'Преглед' : 'View'}
+              </p>
+            </div>
+            <div>
+              <img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsX29mZmljZV8yN18zZF9pbGx1c3RyYXRpb25fb2ZfYV9zZWN1cml0eV9jYW1lcmFfY3V0ZV9jYV82ODAzYTY5Ny1mZDZhLTQ3NTMtYTg1NS01OTNjNjExZjViOGUucG5n.png" alt="home camera" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="card">
+        <h2 className="card-title">
+          {language === 'bg' ? 'Виж камери в парка' : 'See camera at park'}
+        </h2>
+        <div className="card-content">
+          <div className="card-item" onClick={() => window.open('https://weather-webcam.eu/webcam-hija-aleko/', '_blank')} style={{ cursor: 'pointer' }}>
+            <MapPin size={24} className="icon" />
+            <div>
+              <p className="item-title">
+                {language === 'bg' ? 'Преглед' : 'View'}
+              </p>
+            </div>
+            <div>
+              <img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsX29mZmljZV8zMl9taW5pbWFsX2Nsb3NldXBfcGhvdG9fb2ZfY2N0dl9jYW1lcmFfbGlnaHRpbl8wODY3NjNlMy05YzhmLTRjODgtODNhZi05OGY4YjZmYjdiMDVfMi5wbmc.png" alt="park camera" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {isFeedbackVisible && <Feedback language={language} onClose={() => setIsFeedbackVisible(false)} />}
     </div>
   );
 }

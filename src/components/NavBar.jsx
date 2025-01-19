@@ -29,11 +29,13 @@ export default function NavBar({ currentView, setCurrentView, language, setLangu
           <img src="/logo512.png" alt="Morty logo" className="navbar-logo-img" />
           <span className="navbar-title">Run With Morty</span>
         </div>
-    
+   
         <button
+        
           className="menu-toggle"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
+          
           ☰
         </button>
     

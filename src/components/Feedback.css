@@ -62,4 +62,17 @@
     color: #4CAF50;
     font-weight: bold;
   }
+  .feedback-close-button {
+    background: none;
+    border: none;
+    color: #ff0000;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  .feedback-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   
