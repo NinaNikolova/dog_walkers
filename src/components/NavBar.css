@@ -4,7 +4,11 @@
   color: white;
   border-bottom: 1px solid #ddd;
   padding: 0.5rem 1rem;
-  position: relative;
+  position: fixed; /* Makes the navbar fixed at the top */
+  top: 0; /* Positions the navbar at the very top */
+  left: 0; /* Ensures it spans the full width */
+  width: 100%; /* Ensures it covers the full width of the viewport */
+  z-index: 1000; /* Places it above other elements */
   display: flex;
   justify-content: space-between;
 

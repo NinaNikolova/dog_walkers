@@ -9,12 +9,14 @@
     max-width: 600px;
     margin: 20px auto;
     padding-inline: 20px;
+    margin-top: 80px;
   }
   
   .messages-header {
     background-color: #f8f9fa;
     padding: 16px;
     border-bottom: 1px solid #e0e0e0;
+    margin-top: 40px;
   }
   
   .messages-title {

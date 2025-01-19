@@ -54,7 +54,7 @@ export default function ProfileView({ language }) {
           </li>
           <li className="details-item">
             <strong>{language === 'bg' ? 'Куче' : 'Dog'}:</strong>{' '}
-            {language === 'bg' ? 'Рекс' : 'Rex'}
+            {language === 'bg' ? 'Макс' : 'Max'}
           </li>
         </ul>
       </div>
