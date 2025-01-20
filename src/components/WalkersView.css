@@ -82,7 +82,7 @@
   color: #555;
 }
 .reserve-button {
-  margin-top: 10px;
+  margin-block: 10px;
   padding: 8px 16px;
   background-color: #4CAF50; /* Green color */
   color: white;
@@ -110,8 +110,78 @@
   cursor: pointer;
   color: green;
   transition: color 0.3s;
+  border: none;
+ margin-top: 5px;
 }
 
 .icon:hover {
   color: darkgreen;
 }
+
+
+.interaction-btn {
+  /* display: flex;
+  align-items: center;
+  gap: 4px; */
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  /* padding: 8px; */
+  /* border-radius: 8px; */
+  transition: all 0.2s ease;
+}
+
+.interaction-btn:hover {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.interaction-btn.active {
+  transform: scale(1.1);
+}
+
+.interaction-btn.liked {
+  color: #2196f3;
+}
+
+.interaction-btn.disliked {
+  color: #f44336;
+}
+
+.interaction-btn.liked:hover {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.interaction-btn.disliked:hover {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+/* Animation for like/dislike clicks */
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1.1); }
+}
+
+.interaction-btn:active {
+  animation: pop 0.3s ease;
+}
+
+.interaction-count {
+  font-size: 14px;
+  min-width: 20px;
+}
+
+/* Animation for like/dislike clicks */
+
+  
+  .walker-actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .reserve-button {
+    width: 100%;
+  }
+  
+

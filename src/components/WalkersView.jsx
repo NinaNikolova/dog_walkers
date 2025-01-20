@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { PhoneCall, MessageCircleIcon } from 'lucide-react';
+import { PhoneCall, MessageCircleIcon, ThumbsDown, ThumbsUp } from 'lucide-react';
 import './WalkersView.css';
 
 export default function WalkersView({ language }) {
   const [searchTerm, setSearchTerm] = useState('');
+  const [likes, setLikes] = useState({});
+  const [dislikes, setDislikes] = useState({});
+
 
   const walkers = [
     {
@@ -150,7 +153,36 @@ export default function WalkersView({ language }) {
   const filteredWalkers = walkers.filter(walker =>
     walker.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+  const handleLike = (index) => {
+    setLikes(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+    // Remove dislike if exists
+    if (dislikes[index]) {
+      setDislikes(prev => ({
+        ...prev,
+        [index]: false
+      }));
+    }
+  };
 
+  const handleDislike = (index) => {
+    setDislikes(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+    // Remove like if exists
+    if (likes[index]) {
+      setLikes(prev => ({
+        ...prev,
+        [index]: false
+      }));
+    }
+  };
+
+ 
+  
   return (
     <div className="walkers-container">
       <div className="search-bar">
@@ -185,9 +217,28 @@ export default function WalkersView({ language }) {
             </button>
             <PhoneCall size={20} className="icon" title={language === 'bg' ? 'Телефон' : 'Phone'} />
             <MessageCircleIcon size={20} className="icon" title="Viber" />
+         
+            <button 
+                  onClick={() => handleLike(index)}
+                  className={`interaction-btn icon ${likes[index] ? 'active liked' : ''}`}
+                  title={language === 'bg' ? 'Харесай' : 'Like'}
+                >
+                  <ThumbsUp size={24} fill={likes[index] ? 'currentColor' : 'none'} />
+                </button>
+
+                <button 
+                  onClick={() => handleDislike(index)}
+                  className={`interaction-btn icon ${dislikes[index] ? 'active disliked' : ''}`}
+                  title={language === 'bg' ? 'Не харесвай' : 'Dislike'}
+                >
+                    <ThumbsDown size={24} fill={dislikes[index] ? 'currentColor' : 'none'} />
+                  </button>
+            
           </div>
+          
         </div>
       ))}
+      
     </div>
   );
 }
