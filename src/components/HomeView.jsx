@@ -59,10 +59,15 @@ export default function HomeView({ language }) {
           <div className="card-item">
             <MapPin size={24} className="icon" />
             <div>
-              <p className="item-title">
-                {language === 'bg' ? 'Виж картата' : 'Look on the map'}
-              </p>
-            </div>
+        <a
+          href="https://www.google.com/maps?q=42.6975,23.3242"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="item-title text-blue-500 underline"
+        >
+          {language === 'bg' ? 'Виж картата' : 'Look on the map'}
+        </a>
+      </div>
             <div>
               <img src="https://s13emagst.akamaized.net/products/71497/71496723/images/res_a906fb81418f89ef43440cd1e216ddd5.jpg?width=720&height=720&hash=D03E0FFD0CCDAB70537FED911E0985C7" alt="ring" />
             </div>
@@ -127,6 +132,7 @@ export default function HomeView({ language }) {
         </div>
       </div>
 
+      <img src="https://i.etsystatic.com/41848622/r/il/1ca32e/4709957142/il_fullxfull.4709957142_5guc.jpg" alt="dog" className="dog" />
       {isFeedbackVisible && <Feedback language={language} onClose={() => setIsFeedbackVisible(false)} />}
     </div>
   );
