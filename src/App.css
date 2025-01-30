@@ -133,3 +133,10 @@
       transform: scaleY(-1); /* Обръща кучето по Y (ако искаш ефект като салто) */
   }
 }
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: darkgreen;
+  font-weight: bold;
+}

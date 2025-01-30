@@ -59,15 +59,10 @@ export default function HomeView({ language }) {
           <div className="card-item">
             <MapPin size={24} className="icon" />
             <div>
-        <a
-          href="https://www.google.com/maps?q=42.6975,23.3242"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="item-title text-blue-500 underline"
-        >
-          {language === 'bg' ? 'Виж картата' : 'Look on the map'}
-        </a>
-      </div>
+              <p className="item-title">
+                {language === 'bg' ? 'Виж картата' : 'Look on the map'}
+              </p>
+            </div>
             <div>
               <img src="https://s13emagst.akamaized.net/products/71497/71496723/images/res_a906fb81418f89ef43440cd1e216ddd5.jpg?width=720&height=720&hash=D03E0FFD0CCDAB70537FED911E0985C7" alt="ring" />
             </div>
@@ -76,23 +71,39 @@ export default function HomeView({ language }) {
       </div>
 
       <div className="card">
-        <h2 className="card-title">
-          {language === 'bg' ? 'Виж предстоящи нечовешки събития' : 'See upcoming dog events'}
-        </h2>
-        <div className="card-content">
-          <div className="card-item">
-            <MapPin size={24} className="icon" />
-            <div>
-              <p className="item-title">
-                {language === 'bg' ? 'Виж картата' : 'Look on the map'}
-              </p>
-            </div>
-            <div>
-              <img src="https://thumbs.dreamstime.com/b/group-seven-puppies-featuring-playful-expressions-sit-together-driveway-enjoying-warm-sunshine-group-seven-340349326.jpg" alt="ring" />
-            </div>
-          </div>
-        </div>
+  <h2 className="card-title">
+    {language === 'bg' ? 'Виж предстоящи нечовешки събития' : 'See upcoming dog events'}
+  </h2>
+  <div className="card-content">
+    <div className="card-item">
+      <MapPin size={24} className="icon" />
+      <div>
+        <a
+          href="https://www.google.com/maps?q=42.6975,23.3242" // Линк към Google Maps с примерни координати
+          target="_blank"
+          rel="noopener noreferrer"
+          className="item-title"
+          
+        >
+          {language === 'bg' ? 'Виж картата' : 'Look on the map'}
+        </a>
       </div>
+      <div>
+        <a
+          href="https://www.google.com/maps?q=42.6975,23.3242" // Линк към Google Maps с примерни координати
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://thumbs.dreamstime.com/b/group-seven-puppies-featuring-playful-expressions-sit-together-driveway-enjoying-warm-sunshine-group-seven-340349326.jpg"
+            alt="ring"
+            style={{ width: '100%', borderRadius: '8px' }} // Можеш да стилизираш изображението
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
       <div className="card">
         <h2 className="card-title">
