@@ -51,7 +51,7 @@ export default function NavBar({ currentView, setCurrentView, language, setLangu
             <span>{item.label}</span>
           </button>
         ))}
-        <select
+        <select 
           value={language}
           onChange={(e) => {
             setLanguage(e.target.value);
