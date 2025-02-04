@@ -109,7 +109,7 @@ a{
 }
 
 /* Responsive Design */
-@media (max-width: 100px) {
+@media (max-width: 1600px) {
   .menu-toggle {
     display: block;
   }
