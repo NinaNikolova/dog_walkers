@@ -3,7 +3,7 @@ import { Bell, Calendar, MapPin } from 'lucide-react';
 import './HomeView.css';
 import Feedback from './Feedback';
 
-export default function HomeView({ language }) {
+export default function HomeView({ language, setLanguage  }) {
   const [isFeedbackVisible, setIsFeedbackVisible] = useState(true);
   return (
     <div className="home-container">
@@ -65,7 +65,7 @@ export default function HomeView({ language }) {
           rel="noopener noreferrer"
           className="item-title"
                   >
-          {language === 'bg' ? 'Виж картата' : 'Look on the map'}
+          {language === 'bg' ? 'Виж картата' : 'Find on the map'}
         </a>
       </div>
       <div>
@@ -151,7 +151,7 @@ export default function HomeView({ language }) {
         </div>
       </div>
 
-      <img src="https://i.etsystatic.com/41848622/r/il/1ca32e/4709957142/il_fullxfull.4709957142_5guc.jpg" alt="dog" className="dog" />
+     
       {isFeedbackVisible && <Feedback language={language} onClose={() => setIsFeedbackVisible(false)} />}
     </div>
   );

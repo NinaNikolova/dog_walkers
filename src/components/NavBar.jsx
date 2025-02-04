@@ -1,61 +1,45 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Calendar, Heart, Home, MapPin, MessageCircle, Settings, User, Wallet } from 'lucide-react';
 import './NavBar.css';
 
-export default function NavBar({ currentView, setCurrentView, language, setLanguage }) {
+export default function NavBar({ language, setLanguage }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = {
-    home: { icon: <Home size={18} />, label: language === 'bg' ? 'Начало' : 'Home' },
-    walkers: { icon: <MapPin size={18} />, label: language === 'bg' ? 'Разхождачи' : 'Walkers' },
-    schedule: { icon: <Calendar size={18} />, label: language === 'bg' ? 'График' : 'Schedule' },
-    messages: { icon: <MessageCircle size={18} />, label: language === 'bg' ? 'Съобщения' : 'Messages' },
-   
-    favorites: { icon: <Heart size={18} />, label: language === 'bg' ? 'Любими' : 'Favorites' },
-    wallet: { icon: <Wallet size={18} />, label: language === 'bg' ? 'Портфейл' : 'Wallet' },
-    settings: { icon: <Settings size={18} />, label: language === 'bg' ? 'Настройки' : 'Settings' },
-    profile: { icon: <User size={18} />, label: language === 'bg' ? 'Здравей, Иван' : 'Hi, Ivan' },
-  };
-
-  const handleNavClick = (key) => {
-    setCurrentView(key); // Update the current view
-    setIsMenuOpen(false); // Close the menu
+    home: { icon: <Home size={18} />, label: language === 'bg' ? 'Начало' : 'Home', path: '/' },
+    walkers: { icon: <MapPin size={18} />, label: language === 'bg' ? 'Разхождачи' : 'Walkers', path: '/walkers' },
+    schedule: { icon: <Calendar size={18} />, label: language === 'bg' ? 'График' : 'Schedule', path: '/schedule' },
+    messages: { icon: <MessageCircle size={18} />, label: language === 'bg' ? 'Съобщения' : 'Messages', path: '/messages' },
+    favorites: { icon: <Heart size={18} />, label: language === 'bg' ? 'Любими' : 'Favorites', path: '/favorites' },
+    wallet: { icon: <Wallet size={18} />, label: language === 'bg' ? 'Портфейл' : 'Wallet', path: '/wallet' },
+    settings: { icon: <Settings size={18} />, label: language === 'bg' ? 'Настройки' : 'Settings', path: '/settings' },
+    profile: { icon: <User size={18} />, label: language === 'bg' ? 'Здравей, Иван' : 'Hi, Ivan', path: '/profile' },
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-header">
-        <div className="navbar-logo"  onClick={() => handleNavClick('home')} style={{ cursor: 'pointer' }} >
+        <Link to="/" className="navbar-logo" style={{ cursor: 'pointer' }}>
           <img src="/logo512.png" alt="Morty logo" className="navbar-logo-img" />
           <span className="navbar-title">Run With Morty</span>
-        </div>
-   
-        <button
-        
-          className="menu-toggle"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          
-          ☰
-        </button>
-    
+        </Link>
+
+        <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>☰</button>
       </div>
+
       <div className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
         {Object.entries(navItems).map(([key, item]) => (
-          <button
-            key={key}
-            onClick={() => handleNavClick(key)} // Call the handler to close the menu
-            className={`nav-button ${currentView === key ? 'active' : ''}`}
-          >
+          <Link key={key} to={item.path} className="nav-button" onClick={() => setIsMenuOpen(false)}>
             {item.icon}
             <span>{item.label}</span>
-          </button>
+          </Link>
         ))}
-        <select 
+        <select
           value={language}
           onChange={(e) => {
             setLanguage(e.target.value);
-            setIsMenuOpen(false); // Close the menu when the language changes
+            setIsMenuOpen(false);
           }}
           className="language-selector"
         >

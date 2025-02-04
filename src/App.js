@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import HomeView from './components/HomeView';
@@ -18,13 +19,25 @@ export default function App() {
 
   return (
     <div className="app">
-      <NavBar 
-        currentView={currentView} 
+      <main className="main-content">
+       <Router>
+      <NavBar currentView={currentView} 
         setCurrentView={setCurrentView} 
         language={language} 
-        setLanguage={setLanguage} 
-      />
-      <main className="main-content">
+        setLanguage={setLanguage}  />
+      <Routes>
+        <Route path="/" element={<HomeView language={language} setLanguage={setLanguage}/>} />
+        <Route path="/walkers" element={<WalkersView language={language} setLanguage={setLanguage}/>} />
+        <Route path="/schedule" element={<ScheduleView language={language} setLanguage={setLanguage}/>} />
+        <Route path="/messages" element={<MessagesView language={language} setLanguage={setLanguage}/>} />
+        <Route path="/favorites" element={<FavoritesView language={language} setLanguage={setLanguage} />} />
+        <Route path="/wallet" element={<WalletView language={language} setLanguage={setLanguage}/>} />
+        <Route path="/settings" element={<SettingsView language={language} setLanguage={setLanguage}/>} />
+        <Route path="/profile" element={<ProfileView language={language} setLanguage={setLanguage}/>} />
+      </Routes>
+    </Router>
+    </main>
+      {/* <main className="main-content">
         {currentView === 'home' && <HomeView language={language} />}
         {currentView === 'walkers' && <WalkersView language={language} />}
         {currentView === 'schedule' && <ScheduleView language={language} />}
@@ -33,7 +46,7 @@ export default function App() {
         {currentView === 'favorites' && <FavoritesView language={language} />}
         {currentView === 'wallet' && <WalletView language={language} />}
         {currentView === 'settings' && <SettingsView language={language} />}
-      </main>
+      </main> */}
       <Footer language={language} />
     </div>
   );

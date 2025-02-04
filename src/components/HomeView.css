@@ -71,37 +71,7 @@
     width: 80px;
     height: 80px;
   }
-  .dog {
-  position: absolute;
-  width: 100px;
-  right: 20px; /* Държи кучето в дясната част */
-  top: 0;
-  animation: moveDog 8s linear infinite alternate, flipDog 8s steps(1) infinite alternate;
-}
 
-/* Бавна анимация за движение (отгоре надолу) */
-@keyframes moveDog {
-  0% {
-      top: 0;
-  }
-  100% {
-      top: calc(100% - 150px); /* Спира малко преди края на екрана */
-  }
-}
 
-/* Бързо обръщане */
-@keyframes flipDog {
-  0%, 49% {
-      transform: scaleY(1);
-  }
-  50% {
-      transform: scaleY(-1); /* Обръща кучето по Y (ако искаш ефект като салто) */
-  }
-}
-a{
-  text-decoration: none;
-}
-a:hover{
-  color: darkgreen;
-  font-weight: bold;
-}
+
+

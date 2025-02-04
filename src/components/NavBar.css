@@ -26,6 +26,11 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  font-family: 'Pacifico', cursive; /* Fun and playful font */
+  font-size: 1.8rem;
+  color: #ff9800; /* Bright, energetic color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a cool shadow effect */
+
 }
 
 .navbar-logo-img {
@@ -38,6 +43,9 @@
   font-weight: bold;
   color: white;
 
+}
+a{
+  text-decoration: none;
 }
 
 .menu-toggle {
@@ -72,6 +80,10 @@
   cursor: pointer;
   padding: 0.5rem;
   font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  width: 150px;
 }
 
 .nav-button span {
@@ -97,7 +109,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
+@media (max-width: 100px) {
   .menu-toggle {
     display: block;
   }
@@ -122,11 +134,12 @@
   .nav-button {
     justify-content: center;
     padding: 1rem;
+    color: #3b7d4a;
   }
 
   .language-selector {
     margin-top: 1rem;
-    width: 90%;
+    width: 20%;
     margin-left: auto;
     margin-right: auto;
   }
