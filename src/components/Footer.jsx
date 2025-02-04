@@ -10,7 +10,7 @@ export default function Footer({ language }) {
           <span>Run With Morty</span>
         </div>
         <div className="footer-text">
-          {language === 'bg' ? '© 2025 Всички права запазени' : '© 2025 All rights reserved'}
+          {language === 'bg' ? 'Идеен проект - Иновации' : 'Concept Project - Innovations'}
         </div>
       </div>
     </footer>
